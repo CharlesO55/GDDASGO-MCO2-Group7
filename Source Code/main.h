@@ -7,7 +7,7 @@
 #define RESET "\x1B[0m"
 
 
-
+//RETURNS THE CHAR TYPE
 int distinguishChar(const char c){
 	if (c == ' '){
 		//Space
@@ -23,6 +23,7 @@ int distinguishChar(const char c){
 	}
 }
 
+//RETURNS THE PRECEDENCE
 int getPrecedence(const char* c){
 	switch (c[0]){
 		case '(':
@@ -59,6 +60,7 @@ int getPrecedence(const char* c){
 	}
 }
 
+//RETURNS IF NUMERIC DIGIT OR NOT
 int isDigit(const char c){
 	if(c >= 48 && c <= 58){
 		return 1;
@@ -66,6 +68,7 @@ int isDigit(const char c){
 	return 0;
 }
 
+//CUSTOM SOLUTION SINCE SNODE DOESN'T ALLOW INT
 int evaluatePostfixWithoutQueue(char* postfix){
 //NOT USING STACK/QUEUE. IT ADDS MORE STEPS TO STORE STRING THEN RECONVERT TO INT. JUST CONVERT AND USE INT ARRAY DIRECTLY
 	int n_Temp = 0;			//TEMPORARY INT STORAGE
@@ -181,6 +184,7 @@ int evaluatePostfixWithoutQueue(char* postfix){
 	return a_Operands[0];	//SINCE ALWAYS OVERRIDING THE LEFT, FINAL VALUE IS AT THE BOTTOM
 }
 
+//REFORMATS THE STRING
 void cleanUpString(char* postfix){
 	int i = 0;
 	while (postfix[i] != '\0'){

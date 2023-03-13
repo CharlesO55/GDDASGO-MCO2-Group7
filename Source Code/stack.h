@@ -75,7 +75,7 @@ char* pop(stack **s) {
 void displayStack(stack *s) {
 	while (!stackEmpty(s)){
 		printf("%s ", pop(&s));
-		printf(":");
+		//printf(":");
 		//should it display only (use a temp) or pop it all (alter the stack)?
 	}
 }

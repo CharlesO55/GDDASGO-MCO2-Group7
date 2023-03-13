@@ -33,7 +33,7 @@ int main() {
 		
 		//CALCULATE THE VALUE
 		n_Result = evaluatePostfix(str_PostFix);
-		if (n_Result == -999){
+		if (n_Result == -999){	//AVOID RESULTS OF -999 SINCE THIS IS MEANT FOR ERROR PROMPT
 			printf(RED "\nDivision error by zero!\n\n" RESET);
 		}
 		else{
